@@ -1,1 +1,80 @@
-﻿<h1>SQL Practice Pages OK</h1>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python 语法练习台</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Local Python Lab</p>
+      <h1>Python 语法练习台</h1>
+    </div>
+    <div class="status" id="serverStatus">正在检查终端连接...</div>
+  </header>
+
+  <main class="app-shell">
+    <aside class="practice-panel" aria-label="练习案例">
+      <div class="panel-header">
+        <div>
+          <h2>练习案例</h2>
+          <p id="caseCount">0 个练习</p>
+        </div>
+        <button class="ghost-button" id="resetCode" type="button">重置代码</button>
+      </div>
+
+      <div class="filters" aria-label="练习筛选">
+        <label>
+          <span>难度</span>
+          <select id="difficultyFilter"></select>
+        </label>
+        <label>
+          <span>板块</span>
+          <select id="topicFilter"></select>
+        </label>
+      </div>
+
+      <div class="case-list" id="caseList"></div>
+    </aside>
+
+    <section class="workspace" aria-label="代码工作区">
+      <div class="lesson-card">
+        <div class="meta-row">
+          <p class="tag" id="lessonDifficulty">入门</p>
+          <p class="tag secondary" id="lessonTopic">变量与输出</p>
+        </div>
+        <h2 id="lessonTitle">变量与打印</h2>
+        <p id="lessonGoal"></p>
+        <ol id="lessonSteps"></ol>
+      </div>
+
+      <div class="editor-grid">
+        <section class="editor-panel" aria-label="Python 代码编辑器">
+          <div class="tool-row">
+            <div>
+              <p class="label">main.py</p>
+              <p class="hint">修改代码后点击运行，输出会出现在右侧终端。</p>
+            </div>
+            <button class="run-button" id="runCode" type="button">运行</button>
+          </div>
+          <textarea id="codeEditor" spellcheck="false" aria-label="Python 代码"></textarea>
+        </section>
+
+        <section class="terminal-panel" aria-label="终端输出">
+          <div class="terminal-header">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong>Terminal</strong>
+          </div>
+          <pre id="terminalOutput">等待运行...</pre>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
