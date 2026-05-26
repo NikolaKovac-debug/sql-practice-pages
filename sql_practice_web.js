@@ -1131,8 +1131,8 @@ async function initializeSqlite() {
       initSqlJs({
         locateFile: (file) => `vendor/sqljs/${file}`
       }),
-      6000,
-      "SQLite WASM 加载超时，请确认通过 http:// 或 https:// 打开页面。"
+      30000,
+      "SQLite WASM 加载超时。请刷新重试，或确认浏览器没有拦截 GitHub Pages 的 wasm 文件。"
     );
     sqliteReady = true;
     serverStatus.textContent = "浏览器 SQLite 已就绪";
