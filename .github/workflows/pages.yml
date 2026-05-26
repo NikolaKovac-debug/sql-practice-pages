@@ -32,4 +32,4 @@ jobs:
           path: .
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4cd C:\Users\24043\Documents\sql-practice-pages
+        uses: actions/deploy-pages@v4
